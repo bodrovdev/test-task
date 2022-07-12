@@ -8,9 +8,9 @@
 
 		<section class="navigation-menu section-block">
 			<div class="navigation-menu__container base-container">
-				<figure class="logo-block base-figure">
+				<figure class="navigation-menu__logo-block logo-block">
 					<img class="logo-block__img" src="../img/image/design/logo.png" width="72" height="58" alt="Логотип">
-					<h2 class="logo-block__logo-title base-title">УНИВЕРСИТЕТ<br>РОСИНТЕР</h2>
+					<h2 class="logo-block__logo-title">УНИВЕРСИТЕТ<br>РОСИНТЕР</h2>
 				</figure>
 				<nav class="page-nav">
 					<div class="page-nav__icons">
@@ -38,8 +38,8 @@
 							</a>
 						</div>
 						<div class="page-nav__service">
-							<a class="page-nav__tel-link" href="" >+7 000 000 00 00</a>
-							<a class="page-nav__icon-link base-link" href="#">
+							<a class="page-nav__tel-link base-link" href="" >+7 000 000 00 00</a>
+							<a class="page-nav__search-link base-link" href="#">
 								<figure class="page-nav__icon-image base-figure">
 									<svg class="page-nav__icon-img" width="15" height="15">
 										<use href="../img/icon/sprite.svg#search-icon"></use>
@@ -47,7 +47,7 @@
 								</figure>
 							</a>
 							<button class="page-nav__login-button" type="button">
-								<figure class="page-nav__login-image base-figure">
+								<figure class="page-nav__login-image">
 									<svg class="page-nav__login-img" width="15" height="18">
 										<use href="../img/icon/sprite.svg#lock-icon"></use>
 									</svg>
@@ -74,6 +74,11 @@
 						</li>
 					</ul>
 				</nav>
+				<button class="navigation-menu__burger navigation-menu__burger--disabled base-button" type="button" id="nav-button" onclick="toggleMenu()">
+					<span class="navigation-menu__burger-line"></span>
+					<span class="navigation-menu__burger-line"></span>
+					<span class="navigation-menu__burger-line"></span>
+				</button>
 			</div>
 		</section>
 
@@ -85,7 +90,7 @@
 					</h1>
 					<p class="heading__description base-par">
 						ХАССП (HACCP — Hazard Analysis and Critical Control Point) — 
-						анализ рисков и контроль критических точек. Основа производства 
+						анализ<br> рисков и контроль критических точек. Основа производства<br> 
 						безопасной пищевой продукции.
 					</p>
 				</div>

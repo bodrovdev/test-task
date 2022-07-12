@@ -1,0 +1,120 @@
+@use "../mixins";
+
+.page-nav {
+
+  &__icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    margin: 7px 0 20px 0;
+  }
+
+  &__icons-set {
+    display: flex;
+
+    margin-right: 15px;
+  }
+
+  &__icon-link {
+    display: flex;
+    justify-content: flex-end;
+
+    margin-right: 20px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__service {
+    display: flex;
+    align-items: center;
+
+    & page-nav__icon-link {
+      margin-right: 0;
+    }
+  }
+
+  &__tel-link {
+    font-family: var(--font-family-default);
+    font-size: 16px;
+    line-height: 22px;
+    color: #0C143B;
+
+    margin-right: 20px;
+  }
+
+  &__search-link {
+    margin-right: 23px;
+  }
+
+  &__login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+
+    width: 124px;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+    background: #FE334A;
+
+    color: #FFFFFF;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  &__login-image {
+    padding: 0;
+    margin: 0 11px 0 0;
+  }
+
+  &__login-label {
+    font-family: var(--font-family-default);
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #FFFFFF;
+  }
+
+  &__nav-list {
+    display: flex;
+  }
+
+  &__nav-item {
+    margin-right: 25px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__nav-link {
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+
+    color: #0C143B;
+  }
+
+  &__nav-link--active {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -5px;
+      left: 0;
+
+      width: 100%;
+      height: 2px;
+      background-color: #FE334A;
+    }
+  }
+}

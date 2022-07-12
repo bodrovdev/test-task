@@ -19,5 +19,9 @@
 
 //БЭМ блоки
 @use 'blocks/page-header';
+@use 'blocks/navigation-menu';
+@use 'blocks/logo-block';
+@use 'blocks/page-nav';
+@use 'blocks/heading';
 @use 'blocks/page-content';
 @use 'blocks/page-footer';

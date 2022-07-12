@@ -1,3 +1,16 @@
 .page-header {
+  display: flex;
+  flex-direction: column;
   flex-shrink: 0;
+
+  min-height: 417px;
+
+  background-image: -webkit-image-set(
+    url('../img/image/design/X2-heading-bg.jpg') 2x,
+    url('../img/image/design/heading-bg.jpg') 1x
+  );
+  
+  background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }

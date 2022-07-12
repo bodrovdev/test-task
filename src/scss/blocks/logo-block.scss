@@ -1,0 +1,20 @@
+@use "../mixins";
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 218px;
+  height: 58px;
+
+  &__logo-title {
+    font-family: var(--font-family-default);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #0C143B;
+
+    margin: 0 0 0 8px;
+  }
+}
