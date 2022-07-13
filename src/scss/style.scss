@@ -18,10 +18,16 @@
 @use 'global/fonts';
 
 //БЭМ блоки
+@use 'blocks/section-title';
+
 @use 'blocks/page-header';
 @use 'blocks/navigation-menu';
 @use 'blocks/logo-block';
 @use 'blocks/page-nav';
 @use 'blocks/heading';
 @use 'blocks/page-content';
+@use 'blocks/features';
+@use 'blocks/sectionset';
+@use 'blocks/forwho';
+@use 'blocks/specialist';
 @use 'blocks/page-footer';

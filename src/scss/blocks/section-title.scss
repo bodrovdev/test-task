@@ -1,0 +1,28 @@
+@use "../mixins";
+
+.section-title {
+  position: relative;
+
+  max-width: fit-content;
+  overflow: hidden;
+
+  font-family: var(--font-family-default);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  text-transform: uppercase;
+  color: #0C143B;
+
+  padding-bottom: 5px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 2px;
+    background-color: #FE334A;
+  }
+}

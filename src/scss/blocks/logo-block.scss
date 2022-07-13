@@ -7,14 +7,16 @@
 
   width: 218px;
   height: 58px;
+  user-select: none;
 
   &__logo-title {
     font-family: var(--font-family-default);
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;
+    text-transform: uppercase;
     color: #0C143B;
 
-    margin: 0 0 0 8px;
+    margin: 0 0 0 20px;
   }
 }

@@ -1,0 +1,15 @@
+@use "../mixins";
+
+.sectionset {
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.sectionset--one {
+  margin-top: 30px;
+}

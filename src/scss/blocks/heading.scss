@@ -6,8 +6,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-
-    padding-left: 20px;
   }
 
   &__title {
@@ -17,7 +15,7 @@
     line-height: 49px;
     color: #0C143B;
 
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
   }
 
   &__accent {
