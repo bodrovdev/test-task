@@ -1,3 +1,29 @@
+@use "../mixins";
+
 .page-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   flex-shrink: 0;
+
+  min-height: 60px;
+
+  &__policy {
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0C143B;
+
+    margin: 0 240px 0 80px;
+  }
+
+  &__copyright {
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 25px;
+    color: #0C143B;
+    text-align: center;
+  }
 }

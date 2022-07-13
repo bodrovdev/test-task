@@ -1,0 +1,60 @@
+@use "../mixins";
+
+.documents {
+
+  min-width: 539px;
+
+  margin: 0 190px 0 0;
+
+  &__title {
+    margin: 0 0 30px 0;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    font-family: var(--font-family-default);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0C143B;
+    text-align: left;
+
+    padding-left: 16px;
+    margin-bottom: 25px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 4px;
+      left: 0;
+
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background-color: #FE334A;
+    }
+  }
+
+  // &__item:nth-child(2) .documents__label {
+  //   margin-bottom: 50px;
+  // }
+
+  &__image {
+    align-self: center;
+
+    margin: 0;
+  }
+
+}

@@ -1,0 +1,134 @@
+@use "../mixins";
+
+.contacts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 315px;
+
+  margin-top: 50px;
+
+  &__logo-block {
+    margin: 0 0 10px 0;
+  }
+
+  &__info {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 420px;
+    height: 100%;
+    background-color: #0C143B;
+    box-sizing: border-box;
+
+    padding: 20px 0 20px 0;
+
+    z-index: 10;
+  }
+
+  &__info-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    width: 100%;
+    height: 280px;
+    background-color: #FFFFFF;
+
+    padding: 10px 20px 20px 0;
+
+    z-index: 10;
+  }
+
+  &__main {
+    margin-bottom: 30px;
+  }
+
+  &__main-title {
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+    color: #191A1F;
+    text-transform: uppercase;
+
+    padding: 0;
+    margin: 0 0 10px 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    &:hover .contacts__label {
+      color: #FE334A;
+    }
+
+    &:hover .contacts__icon {
+      color: #FE334A;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px #FE334A;
+    }
+  }
+
+  &__label {
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: #0C143B;
+  }
+
+  &__label--phone {
+    font-size: 24px;
+    line-height: 33px;
+  }
+
+  &__adress {
+    font-family: var(--font-family-default);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+    color: #191A1F;
+
+    padding: 0;
+    margin: 0;
+  }
+
+  &__info-circle {
+    position: absolute;
+    top: 50%;
+    right: -30%;
+
+    width: 272px;
+    height: 272px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+
+    transform: translateY(-50%);
+
+    z-index: 1;
+  }
+
+  &__map-block {
+    width: 100%;
+  }
+}

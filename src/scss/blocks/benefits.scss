@@ -1,0 +1,49 @@
+@use "../mixins";
+
+.benefits {
+
+  &__title {
+    margin: 0 0 30px 0;
+  }
+  
+  &__inner {
+    width: 588px;
+    height: 443px;
+  }
+
+  &__table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #0C143B;
+  }
+
+  &__table-headrow {
+    height: 50px;
+  }
+
+  &__table-head {
+    background-color: #0C143B;
+
+    font-family: var(--font-family-default);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__table-data {
+    border-collapse: collapse;
+    border: 1px solid #0C143B;
+
+    font-family: var(--font-family-default);
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: #333333;
+
+    padding: 5px;
+  }
+}

@@ -7,7 +7,7 @@
 	<header class="page-header">
 		<section class="navigation-menu">
 			<div class="navigation-menu__container base-container">
-				<figure class="navigation-menu__logo-block logo-block base-figure">
+				<figure class="navigation-menu__logo-block logo-block">
 					<img class="logo-block__img" src="../img/image/design/logo.png" width="59" height="58" alt="Логотип">
 					<span class="logo-block__logo-title">Университет<br>Росинтер</span>
 				</figure>
@@ -140,11 +140,11 @@
 			</div>
 		</section>
 
-		<div class="sectionset sectionset--one">
+		<div class="sectionset">
 			<a name="toTeachers"></a>
 			<div class="sectionset__container base-container">
 
-				<section class="forwho">
+				<section class="forwho sectionset__section-block">
 					<h2 class="forwho__title section-title">Для кого:</h2>
 					<div class="forwho__inner">
 						<div class="forwho__top">
@@ -178,7 +178,7 @@
 					</div>
 				</section>
 
-				<section class="specialist">
+				<section class="specialist sectionset__section-block">
 					<h2 class="specialist__title section-title">Преподаватель–эксперт:</h2>
 					<div class="specialist__inner">
 						<figure class="specialist__image">
@@ -198,20 +198,14 @@
 					</div>
 				</section>
 
-			</div>
-		</div>
-
-		<div class="sectionset sectionset--two">
-			<div class="sectionset__container base-container">
-
-				<section class="documents">
+				<section class="documents sectionset__section-block">
 					<h2 class="documents__title section-title">Выдаваемые документы:</h2>
 					<div class="documents__inner">
 						<div class="documents__item">
 							<span class="documents__label">
 								Сертификат о&nbsp;прохождении обучения темы (название одного из&nbsp;<br>модулей).
 							</span>
-							<figure class="documents__image base-figure">
+							<figure class="documents__image">
 								<picture>
 									<source srcset="../img/image/content/document-1.webp 1x, ../img/image/content/X2-document-1.webp 2x" type="image/webp">
 									<img srcset="../img/image/content/document-1.jpg 1x, ../img/image/content/X2-document-1.jpg 2x" class="documents__photo" alt="Скан сертификата">
@@ -232,13 +226,13 @@
 					</div>
 				</section>
 
-				<section class="benefits">
+				<section class="benefits sectionset__section-block">
 					<a name="toAbout"></a>
 					<h2 class="benefits__title section-title base-title">Что дает внедрение ХАССП:</h2>
 					<div class="benefits__inner">
 						<table class="benefits__table">
 							<tdhead class="benefits__table-header">
-								<tr class=benefits__table-row>
+								<tr class=benefits__table-headrow>
 									<th class="benefits__table-head">Внутренние<br>преимущества</th>
 									<th class="benefits__table-head">Внешние<br>преимущества</th>
 									<th class="benefits__table-head">Экономические</th>
@@ -248,8 +242,8 @@
 							<tbody class="benefits__table-body">
 								<tr class="benefits__table-row">
 									<td class="benefits__table-data">
-										Обнаружение слабых<br />
-										мест на&nbsp;предприятии<br />
+										Обнаружение слабых
+										мест на&nbsp;предприятии
 										через анализ рисков
 									</td>
 									<td class="benefits__table-data">
@@ -330,38 +324,49 @@
 		<section class="contacts">
 			<a name="toContacts"></a>
 			<div class="contacts__info">
-				<div class="contacts__container base-container"></div>
-				<figure class="contacts__logo-block logo-block base-figure">
-					<img class="logo-block__img" src="../img/image/design/logo.png" width="59" height="58" alt="Логотип">
-					<span class="logo-block__logo-title">Университет<br>Росинтер</span>
-				</figure>
+				<div class="contacts__info-inner">
+					<figure class="contacts__logo-block logo-block">
+						<img class="logo-block__img" src="../img/image/design/logo.png" width="59" height="58" alt="Логотип">
+						<span class="logo-block__logo-title">Университет<br>Росинтер</span>
+					</figure>
 					<div class="contacts__main">
-						<h3 class="contacts__title base-title">Контакты</h3>
+						<h3 class="contacts__main-title">Контакты</h3>
 						<ul class="contacts__list base-list">
 							<li class="contacts__item">
-								<a class="contacts__link base-link" href="">+7&nbsp;000&nbsp;000 00 00</a>
+								<a class="contacts__link base-link" href="tel: +70000000000">
+									<svg class="contacts__icon" width="17" height="17">
+										<use href="../img/icon/sprite.svg#phone-icon"></use>
+									</svg>
+									<span class="contacts__label contacts__label--phone">+7 000 000 00 00</span>
+								</a>
 							</li>
 							<li class="contacts__item">
-								<a class="contacts__link base-link" href="">info@mail.ru</a>
+								<a class="contacts__link base-link" target="_blank" rel="noopener noreferrer" href="mailto:info@mail.ru">
+									<svg class="contacts__icon" width="18" height="12">
+										<use href="../img/icon/sprite.svg#email-icon"></use>
+									</svg>
+									<span class="contacts__label">info@mail.ru </span>
+								</a>
 							</li>
 						</ul>
 					</div>
-					<div class="contacts__adress">
-						<h4 class="contacts__adress-title base-title">Наш адрес:</h4>
-						<span class="contacts__adress-info">Москва, ул.&nbsp;Ленина, д. 7, стр.&nbsp;1</span>
-					</div>
-					<div class="contacts__graphic-circle"></div>
+					<p class="contacts__adress">
+						Наш адрес:<br />
+						Москва, ул.&nbsp;Ленина, д. 7, стр.&nbsp;1
+					</p>
 				</div>
-				<div class="contacts__map-block">
-					<a name="toMap"></a>
-				</div>
+				<span class="contacts__info-circle"></span>
+			</div>
+			<a name="toMap"></a>
+			<div class="contacts__map-block">
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0c52d8994386d9d8c796b7d740ff07be27d39eb0cf3e1f6ca3dc959e85af76c8&amp;source=constructor" width="100%" height="315" frameborder="0"></iframe>
 			</div>
 		</section>
 	</main>
 
 	<footer class="page-footer">
 		<a class="page-footer__policy base-link" href="#">Политика конфиденциальности</a>
-		<span class="page-footer__copyright-years">
+		<span class="page-footer__copyright">
 			&copy; 2000&nbsp;&mdash; 2019 &laquo;Росинтер Ресторантс&raquo;<br>Все права защищены.
 		</span>
 	</footer>
