@@ -3,10 +3,20 @@
 .page-footer {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   flex-shrink: 0;
 
   min-height: 60px;
+
+  
+
+  @include mixins.respond-to(desktopD) {
+    justify-content: flex-start;
+  }
+
+  @include mixins.respond-to(mobileOnly) {
+    padding: 0 0 0 10px;
+  }
 
   &__policy {
     font-family: var(--font-family-default);
@@ -15,7 +25,14 @@
     line-height: 19px;
     color: #0C143B;
 
-    margin: 0 240px 0 80px;
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @include mixins.respond-to(desktopD) {
+      margin: 0 240px 0 80px;
+    }
   }
 
   &__copyright {
@@ -25,5 +42,15 @@
     line-height: 25px;
     color: #0C143B;
     text-align: center;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 11px;
+    }
   }
+}
+
+.page-footer__hidden {
+  @include mixins.respond-to(mobileOnly) {
+    display: none;
+  } 
 }

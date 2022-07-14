@@ -12,6 +12,12 @@
     font-family: var(--font-family-default);
     font-weight: 700;
     font-size: 36px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 30px;
+      line-height: 35px;
+    }
+
     line-height: 49px;
     color: #0C143B;
 
@@ -28,6 +34,12 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 25px;
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 16px;
+      line-height: 25px;
+    }
+
     color: #0C143B;
   }
 }

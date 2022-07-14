@@ -1,9 +1,33 @@
 @use "../mixins";
 
 .specialist {
+  display: flex;
+  flex-direction: column;
+
+  width: 540px;
+
+  @include mixins.respond-to(mobileOnly) {
+    width: 290px;
+  }
 
   &__title {
+    align-self: center;
+
+    font-family: var(--font-family-default);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    text-transform: uppercase;
+    color: #0C143B;
+    text-align: center;
+
     margin: 0 0 15px 0;
+
+    @include mixins.respond-to(desktopD) {
+      align-self: flex-start;
+
+      text-align: left;
+    }
   }
 
   &__image {
@@ -12,11 +36,23 @@
 
   &__inner {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mixins.respond-to(desktopD) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 
   &__data {
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    @include mixins.respond-to(desktopD) {
+      align-items: flex-start;
+    }
   }
 
   &__name {
@@ -32,17 +68,24 @@
 
   &__desc {
     font-family: var(--font-family-default);
-    font-weight: 300;
-    font-size: 14px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 19px;
     color: #0C143B;
+    text-align: center;
 
     padding: 0;
     margin: 0 0 10px 0;
+
+    @include mixins.respond-to(desktopD) {
+      font-size: 14px;
+      font-weight: 300;
+      text-align: left;
+    }
   }
 
   &__learnmore {
-    align-self: flex-end;
+    align-self: center;
 
     font-family: var(--font-family-default);
     font-weight: 400;
@@ -52,6 +95,12 @@
     color: #0C143B;
 
     transition-duration: 0.1s;
+
+    @include mixins.respond-to(desktopD) {
+      align-self: flex-end;
+
+      font-size: 18px;
+    }
 
     &:hover {
       color: #FE334A;

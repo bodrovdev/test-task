@@ -1,25 +1,23 @@
 @use "../mixins";
 
 .sectionset {
-  margin: 30px 0 0 0;
 
   &__container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+
+    @include mixins.respond-to(desktopD) {
+      flex-direction: row;
+      align-items: flex-start;
+    }
   }
 
-  &__section-block {
-    margin-bottom: 45px;
+  &--one {
+    margin-bottom: 50px;
   }
 
-  &__section-block:nth-child(n+3) {
-    margin-bottom: 0;
-  }
-
-  &__section-block:nth-child(odd) {
-    margin-right: 85px;
+  &--two {
+    
   }
 }

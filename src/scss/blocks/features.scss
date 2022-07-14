@@ -4,10 +4,19 @@
 
   margin-top: 35px;
   
+  @include mixins.respond-to(mobileOnly) {
+    margin-top: 20px;
+  }
+  
   &__container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -18,6 +27,17 @@
 
     width: 373px;
     height: 221px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-bottom: 30px;
+    
+    @include mixins.respond-to(mobileOnly) {
+      width: 290px;
+
+      margin-bottom: 50px;
+    }
 
     &:nth-child(1) {
       background-image: -webkit-image-set(
@@ -75,6 +95,7 @@
     background-color: #0C143B;
     border-radius: 20px;
     cursor: pointer;
+    user-select: none;
 
     transition-duration: 0.1s;
 

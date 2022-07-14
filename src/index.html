@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="ru">
-@@include('components/base-blocks/_base-head.html', {
-	"title": "test"
-})
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="format-detection" content="date=no">
+	<meta name="format-detection" content="address=no">
+	<meta name="format-detection" content="email=no">
+	<meta name="theme-color" content="darkblue">
+
+	<link href="./css/style.min.css" rel="stylesheet">
+	<title>test</title>
+</head>
 <body>
 	<header class="page-header">
 		<section class="navigation-menu">
 			<div class="navigation-menu__container base-container">
-				<figure class="navigation-menu__logo-block logo-block">
+				<figure class="navigation-menu__logo-block logo-block" id="nav-logo">
 					<img class="logo-block__img" src="../img/image/design/logo.png" width="59" height="58" alt="Логотип">
 					<span class="logo-block__logo-title">Университет<br>Росинтер</span>
 				</figure>
-				<nav class="page-nav">
+				<nav class="page-nav" id="nav-menu">
 					<ul class="page-nav__contacts-icons base-list">
 						<li class="page-nav__contacts-item">
 							<a class="page-nav__contacts-link base-link" target="_blank" rel="noopener noreferrer" href="mailto:info@mail.ru">
@@ -42,7 +52,7 @@
 								</svg>
 							</a>
 						</li>
-						<li class="page-nav__contacts-item">
+						<li class="page-nav__contacts-item page-nav__contacts-item--button">
 							<button class="page-nav__login-button base-button" type="button">
 								<figure class="page-nav__login-image page-figure">
 									<svg class="page-nav__login-img" width="18" height="18">
@@ -58,7 +68,7 @@
 							<a class="page-nav__nav-link base-link" href="#toCourses">Курсы</a>
 						</li>
 						<li class="page-nav__nav-item">
-							<a class="page-nav__nav-link base-link" href="#toAbout">Об Университете</a>
+							<a class="page-nav__nav-link base-link" href="#toAbout"><span class="page-nav__hidden">Об </span>Университет<span class="page-nav__hidden">е</span></a>
 						</li>
 						<li class="page-nav__nav-item">
 							<a class="page-nav__nav-link base-link" href="#toTeachers">Преподаватели</a>
@@ -71,7 +81,7 @@
 						</li>
 					</ul>
 				</nav>
-				<button class="navigation-menu__burger navigation-menu__burger--disabled base-button" type="button" id="nav-button" onclick="toggleMenu()">
+				<button class="navigation-menu__burger base-button" type="button" id="nav-button">
 					<span class="navigation-menu__burger-line"></span>
 					<span class="navigation-menu__burger-line"></span>
 					<span class="navigation-menu__burger-line"></span>
@@ -95,8 +105,8 @@
 		</section>
 	</header>
 
+	<a name="toCourses"></a>
 	<main class="page-content">
-		<a name="toCourses"></a>
 		<section class="features">
 			<div class="features__container base-container">
 				<div class="features__item">
@@ -140,11 +150,11 @@
 			</div>
 		</section>
 
-		<div class="sectionset">
-			<a name="toTeachers"></a>
+		<div class="sectionset sectionset--one">
 			<div class="sectionset__container base-container">
-
-				<section class="forwho sectionset__section-block">
+				
+				<a name="toAbout"></a>
+				<section class="forwho">
 					<h2 class="forwho__title section-title">Для кого:</h2>
 					<div class="forwho__inner">
 						<div class="forwho__top">
@@ -178,7 +188,8 @@
 					</div>
 				</section>
 
-				<section class="specialist sectionset__section-block">
+				<a name="toTeachers"></a>
+				<section class="specialist">
 					<h2 class="specialist__title section-title">Преподаватель–эксперт:</h2>
 					<div class="specialist__inner">
 						<figure class="specialist__image">
@@ -197,13 +208,17 @@
 						</div>
 					</div>
 				</section>
+			</div>
+		</div>
 
-				<section class="documents sectionset__section-block">
+		<div class="sectionset sectionset--two">
+			<div class="sectionset__container base-container">
+				<section class="documents">
 					<h2 class="documents__title section-title">Выдаваемые документы:</h2>
 					<div class="documents__inner">
 						<div class="documents__item">
 							<span class="documents__label">
-								Сертификат о&nbsp;прохождении обучения темы (название одного из&nbsp;<br>модулей).
+								Сертификат о&nbsp;прохождении обучения темы (название одного из&nbsp;модулей).
 							</span>
 							<figure class="documents__image">
 								<picture>
@@ -226,7 +241,7 @@
 					</div>
 				</section>
 
-				<section class="benefits sectionset__section-block">
+				<section class="benefits">
 					<a name="toAbout"></a>
 					<h2 class="benefits__title section-title base-title">Что дает внедрение ХАССП:</h2>
 					<div class="benefits__inner">
@@ -317,7 +332,6 @@
 						</table>
 					</div>
 				</section>
-
 			</div>
 		</div>
 
@@ -367,7 +381,8 @@
 	<footer class="page-footer">
 		<a class="page-footer__policy base-link" href="#">Политика конфиденциальности</a>
 		<span class="page-footer__copyright">
-			&copy; 2000&nbsp;&mdash; 2019 &laquo;Росинтер Ресторантс&raquo;<br>Все права защищены.
+			© 2000 — 2019 «Росинтер Ресторантс»<br>
+			<span class="page-footer__hidden"><br>Все права защищены.</span>
 		</span>
 	</footer>
 <script src="./js/script.min.js"></script>

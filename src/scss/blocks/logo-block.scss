@@ -9,6 +9,14 @@
   height: 58px;
   user-select: none;
 
+  @include mixins.respond-to(tabletOnly) {
+    flex-direction: column;
+    justify-content: center;
+
+    width: auto;
+    height: auto;
+  }
+
   &__logo-title {
     font-family: var(--font-family-default);
     font-size: 18px;
@@ -18,5 +26,11 @@
     color: #0C143B;
 
     margin: 0 0 0 20px;
+
+    @include mixins.respond-to(tabletOnly) {
+      text-align: center;
+
+      margin: 0;
+    }
   }
 }

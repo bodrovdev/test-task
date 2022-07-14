@@ -1,10 +1,22 @@
 @use "../mixins";
 
 .forwho {
-  width: 539px;
-  height: 293px;
+  display: flex;
+  flex-direction: column;
 
-  margin: 0 80px 0 0;
+  width: 540px;
+  height: 300px;
+
+  margin: 0 0 50px 0;
+
+  @include mixins.respond-to(mobileOnly) {
+    width: 290px;
+    height: auto;
+  }
+
+  @include mixins.respond-to(desktopD) {
+    margin: 0 80px 0 0;
+  }
 
   &__container {
     display: flex;
@@ -13,7 +25,17 @@
   }
 
   &__title {
+    align-self: center;
+    
+    text-align: center;
+
     margin: 0 0 25px 0;
+
+    @include mixins.respond-to(desktopD) {
+      align-self: flex-start;
+
+      text-align: left;
+    }
   }
 
   &__inner {
@@ -30,6 +52,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-bottom: 30px;
   }
 
   &__icon {
@@ -53,12 +77,22 @@
     align-items: center;
     justify-content: space-evenly;
 
-    margin-bottom: 30px;
+    @include mixins.respond-to(mobileOnly) {
+      flex-wrap: wrap;
+    }
   }
 
   &__bottom {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    & .forwho__item {
+      margin-bottom: 0;
+    }
+
+    @include mixins.respond-to(mobileOnly) {
+      flex-wrap: wrap;
+    }
   }
 }
