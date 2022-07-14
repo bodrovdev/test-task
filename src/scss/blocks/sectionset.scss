@@ -4,13 +4,9 @@
 
   &__container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 
-    @include mixins.respond-to(desktopD) {
-      flex-direction: row;
-      align-items: flex-start;
-    }
+    flex-wrap: wrap;
   }
 
   &--one {
@@ -18,6 +14,5 @@
   }
 
   &--two {
-    
   }
 }

@@ -1,20 +1,15 @@
 @use "../mixins";
 
 .documents {
-
   display: flex;
   flex-direction: column;
 
-  width: 540px;
+  width: 100%;
 
-  margin: 0 0 50px 0;
+  margin-bottom: 50px;
 
-  @include mixins.respond-to(mobileOnly) {
-    width: 290px;
-  }
-
-  @include mixins.respond-to(desktopD) {
-    margin: 0 190px 0 0;
+  @include mixins.respond-to(desktopS) {
+    width: 49%;
   }
 
   &__title {
@@ -27,7 +22,7 @@
       margin: 0 0 15px 0;
     }
 
-    @include mixins.respond-to(desktopD) {
+    @include mixins.respond-to(desktopS) {
       align-self: flex-start;
       text-align: left;
     }
@@ -38,7 +33,7 @@
     flex-direction: column;
     align-items: center;
 
-    @include mixins.respond-to(desktopD) {
+    @include mixins.respond-to(desktopS) {
       align-items: flex-start;
     }
   }
@@ -46,8 +41,13 @@
   &__item {
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     margin-bottom: 30px;
+
+    @include mixins.respond-to(desktopS) {
+      align-items: flex-start;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -73,16 +73,21 @@
     margin-bottom: 25px;
 
     @include mixins.respond-to(mobileOnly) {
-      font-weight: 300;
       font-size: 14px;
+      font-weight: 300;
     }
 
-    @include mixins.respond-to(desktopD) {
+    @include mixins.respond-to(desktopS) {
       text-align: left;
     }
   
-
     &::before {
+      display: none;
+
+      @include mixins.respond-to(desktopS) {
+        display: block;
+      }
+
       position: absolute;
       content: "";
       top: 6px;
@@ -95,20 +100,7 @@
     }
   }
 
-  &__br {
-    @include mixins.respond-to(mobileOnly) {
-      display: none;
-    }
-  }
-
-  // &__item:nth-child(2) .documents__label {
-  //   margin-bottom: 50px;
-  // }
-
   &__image {
-    align-self: center;
-
     margin: 0;
   }
-
 }

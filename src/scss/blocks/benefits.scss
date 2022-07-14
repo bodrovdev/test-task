@@ -1,84 +1,66 @@
 @use "../mixins";
 
 .benefits {
-
   display: flex;
   flex-direction: column;
 
+  width: 100%;
+
+  @include mixins.respond-to(desktopS) {
+    width: 49%;
+  }
+
   &__title {
     align-self: center;
-
     text-align: center;
 
     margin: 0 0 30px 0;
 
-    @include mixins.respond-to(desktopD) {
-      align-self: flex-start;
-
-      text-align: left;
+    @include mixins.respond-to(desktopS) {
+      align-self: flex-end;
     }
   }
-  
-  &__inner {
-    width: 590px;
-  
-    @include mixins.respond-to(mobileOnly) {
-      width: 320px;
-      height: auto;
-      overflow-x: auto;
-    }
 
-    @include mixins.respond-to(desktopD) {
-      height: 445px;
+  &__inner {
+    width: 100%;
+
+    @include mixins.respond-to(mobileOnly) {
+      overflow-x: auto;
     }
   }
 
   &__table {
-    table-layout: fixed;
     width: 100%;
-    border-collapse: collapse;
     border: 1px solid #0C143B;
-
-    @include mixins.respond-to(mobileOnly) {
-      width: 1000px;
-    }
+    border-collapse: collapse;
   }
 
-  &__table-headrow {
-    height: 50px;
-  }
-
-  &__table-head {
+  &__table-headdata {
     background-color: #0C143B;
+    border: 1px solid #0C143B;
+    border-collapse: collapse;
 
     font-family: var(--font-family-default);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     text-align: center;
     color: #FFFFFF;
 
-    @include mixins.respond-to(desktopD) {
-      font-size: 14px;
-    }
+    padding: 7px;
   }
 
   &__table-data {
-    border-collapse: collapse;
     border: 1px solid #0C143B;
-
+    border-collapse: collapse;
+    
     font-family: var(--font-family-default);
-    font-weight: 400;
-    font-size: 11px;
+    font-weight: 300;
+    font-size: 12px;
     line-height: 16px;
     text-align: center;
     color: #333333;
 
-    padding: 5px;
-
-    @include mixins.respond-to(desktopD) {
-      font-weight: 300;
-      font-size: 12px;
-    }
+    padding: 7px;
   }
 }
