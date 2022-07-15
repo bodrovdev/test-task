@@ -232,6 +232,12 @@
   }
 
   &__nav-link {
+
+    @include mixins.respond-to(mobileOnly) {
+      font-size: 18px;
+      color: #FFFFFF;
+     }
+     
     position: relative;
 
     display: block;
@@ -245,25 +251,13 @@
     color: #0C143B;
     overflow: hidden;
 
-    &::before {
-      position: absolute;
-      content: "";
-      bottom: -100%;
-      left: 0;
+    transition-duration: 0.1s;
 
-      width: 100%;
-      height: 2px;
-      background-color: #FE334A;
-      opacity: 0;
+    &:hover {
+      color: #FE334A;
+      text-decoration: underline;
 
-      transition-duration: 0.1s;
-    }
-
-    &:hover::before {
-      bottom: -5px;
-      opacity: 100%;
-
-      transition-property: bottom, opacity;
+      transition-property: color, text-decoration;
       transition-duration: 0.1s;
       transition-timing-function: ease-in-out;
     }
@@ -283,11 +277,4 @@
       display: none;
     }
   }
-}
-
-.page-nav__nav-link {
-  @include mixins.respond-to(mobileOnly) {
-    font-size: 18px;
-    color: #FFFFFF;
-   }
 }
